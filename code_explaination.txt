@@ -1,0 +1,33 @@
+Apartment Letter Generator
+
+This Python script helps you quickly create personalized letters for apartment residents 
+using a Word template and an Excel file with resident names.
+
+What It Does:
+- Reads apartment numbers and resident names from an Excel file.
+- Replaces a placeholder in a Word template with each resident’s name.
+- Creates one Word letter for every apartment.
+- Uses a default greeting if the resident name is missing.
+
+How It Works:
+1. Setup
+   - You need a Word template (template_letter.docx) with "Dear *name*," as a placeholder.
+   - You also need an Excel file (resident_names.xlsx) with two columns: Apartment and Resident Name.
+
+2. Output Folder
+   - The script automatically creates a folder called apartment_letters_generated to save the letters.
+
+3. Read Resident Names
+   - The script loads your Excel file and makes a list of apartments and names.
+
+4. Make Personalized Letters
+   - Loops through all apartments (like A1, A2… B1, B2…)
+   - If a resident’s name is in the Excel file, it uses it in the greeting ("Dear Haaland").
+   - If no name is found, it uses a default greeting ("Dear resident of apartment A1,").
+
+5. Save Letters
+   - Each letter is saved as a Word file in the output folder with a name like Letter_Apartment_A1.docx.
+
+6. Done!
+   - The script prints a message for each letter it creates.
+   - When finished, you have all letters ready in the output folder.
